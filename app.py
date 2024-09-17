@@ -135,9 +135,7 @@ for i in range(len(points)):
             cv2.line(paintWindow, points[i][j][k - 1], points[i][j][k], colors[i], 2)
 
 # Display the canvas and frame
-if st.sidebar.checkbox("Show Canvas", value=True):
-    st.image(paintWindow, channels="BGR", caption="Canvas")
-
+st.image(paintWindow, channels="BGR", caption="Canvas")
 frame_window.image(frame, channels="BGR")  # Display the live frame in Streamlit
 
 if clear_button:
